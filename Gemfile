@@ -30,6 +30,7 @@ group :development do
   gem 'rb-fsevent', :require => false
   gem 'rb-inotify', :require => false
   gem 'spring-commands-rspec'
+  gem 'annotate'
 end
 
 group :development, :test do
