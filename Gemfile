@@ -43,10 +43,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :test do
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
