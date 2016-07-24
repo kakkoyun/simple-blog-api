@@ -27,8 +27,10 @@ module SimpleBlogApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    # Add middlewares
+    # Add middleware
     config.middleware.use Rack::Attack
 
+    # Remove middleware
+    config.middleware.delete ::Rack::Sendfile
   end
 end
