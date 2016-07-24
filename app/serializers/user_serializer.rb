@@ -10,12 +10,8 @@
 #  updated_at      :datetime         not null
 #
 
-FactoryGirl.define do
+class UserSerializer < ActiveModel::Serializer
+  attributes :id, :email
 
-  factory :user do
-    type "User"
-    email { Faker::Internet.email }
-    password Faker::Internet.password(8, 40)
-    password_confirmation { password }
-  end
+  cache key: 'user', expires_in: 3.hours, only: [:id, :email]
 end

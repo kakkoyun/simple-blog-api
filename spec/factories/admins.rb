@@ -2,8 +2,8 @@ FactoryGirl.define do
 
   factory :admin do
     type "Admin"
-    email Faker::Internet.email
-    password "password"
-    password_confirmation "password"
+    email { Faker::Internet.email }
+    password Faker::Internet.password(8, 40)
+    password_confirmation { password }
   end
 end
